@@ -87,10 +87,4 @@ public class Q1Main {
 
         return null;
     }
-
-
-    public static int somar(int a, int b) {
-        return a + b;
-    }
-
 }
