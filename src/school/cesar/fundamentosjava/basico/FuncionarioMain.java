@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package school.cesar.fundamentosjava.basico;
 
 public class FuncionarioMain {
 
@@ -6,7 +6,7 @@ public class FuncionarioMain {
 
         //verde
         Funcionario adelino = new Funcionario();
-        adelino.nome =  "adelino";
+        adelino.nome = "adelino";
 
         //vermelha
         Funcionario lucca = new Funcionario();

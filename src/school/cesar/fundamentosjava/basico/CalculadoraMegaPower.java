@@ -1,3 +1,5 @@
+package school.cesar.fundamentosjava.basico;
+
 import java.util.Scanner;
 
 public class CalculadoraMegaPower {
@@ -8,7 +10,7 @@ public class CalculadoraMegaPower {
 
         Scanner leTeclado = new Scanner(System.in);
 
-        int a = 0, b  = 0, opcaoMenu  = 0;
+        int a = 0, b = 0, opcaoMenu = 0;
 
         do {
             System.out.println("Por favor, escolha uma opcao");
@@ -20,9 +22,9 @@ public class CalculadoraMegaPower {
 
             opcaoMenu = leTeclado.nextInt();
 
-            if(opcaoMenu == OPCAO_SAIR){
+            if (opcaoMenu == OPCAO_SAIR) {
                 break;
-            }else if(opcaoMenu >= OPCAO_SOMAR && opcaoMenu <= 5){
+            } else if (opcaoMenu >= OPCAO_SOMAR && opcaoMenu <= 5) {
                 System.out.println("Digite 2 numeros");
                 a = leTeclado.nextInt();
                 b = leTeclado.nextInt();

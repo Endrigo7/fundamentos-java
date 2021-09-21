@@ -1,3 +1,5 @@
+package school.cesar.fundamentosjava.basico;
+
 import java.util.Scanner;
 
 public class Calculadora {

@@ -1,3 +1,5 @@
+package school.cesar.fundamentosjava.basico;
+
 public class ComandoBreak {
 
     public static void main(String[] args) {

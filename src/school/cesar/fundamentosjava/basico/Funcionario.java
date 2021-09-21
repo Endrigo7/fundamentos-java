@@ -1,3 +1,5 @@
+package school.cesar.fundamentosjava.basico;
+
 public class Funcionario {
 
     String nome;
@@ -5,7 +7,7 @@ public class Funcionario {
     long cpf;
 
     public String toString() {
-        return "Funcionario{" +
+        return "school.cesar.fundamentosjava.basico.Funcionario{" +
                 "nome='" + nome + '\'' +
                 ", matricula=" + matricula +
                 ", cpf=" + cpf +
