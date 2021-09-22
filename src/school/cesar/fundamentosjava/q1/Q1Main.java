@@ -7,6 +7,7 @@ public class Q1Main {
     public static void main(String[] args) {
         Scanner leTeclado = new Scanner(System.in);
 
+
         int opcaoMenu = -99;
         Aluno[] alunos = new Aluno[Constantes.QUANTIDADE_MAXIMA_DE_ALUNOS];
         int quantidadeAlunosCadastrados = 0;
@@ -70,10 +71,23 @@ public class Q1Main {
         return aluno;
     }
 
-    private static Aluno encontrarAluno(long matricula, Aluno[] alunos) {
-        for (int i = 0; i < alunos.length; i++) {
-            if (alunos[i].matricula == matricula) {
-                return alunos[i];
+
+    public static void teste(Scanner leTeclado) {
+        System.out.println("digite um numero");
+        int numero = leTeclado.nextInt();
+
+        if (numero % 2 == 0) {
+            System.out.println("numero par");
+        }
+
+        System.out.println("numero impar");
+    }
+
+
+    private static Aluno encontrarAluno(long matricula, Aluno[] listaAlunos) {
+        for (int i = 0; i < listaAlunos.length; i++) {
+            if (listaAlunos[i].matricula == matricula) {
+                return listaAlunos[i];
             }
 
             /*
@@ -88,3 +102,12 @@ public class Q1Main {
         return null;
     }
 }
+//10 min
+/*
+ * Crie uma classe Conta (Numero e Saldo)
+ * Crie uma classe Cliente (CPF e Nome)
+ * Uma Conta deve ter um Cliente
+ * Cria uma classe com um metodo main.
+ * Nesta classe, criei duas contas e informe o nome do cliente de maior saldo.
+ * o saldo deve receber o resultado de um numero aleatorio -> new Random().nextDouble();
+ */
