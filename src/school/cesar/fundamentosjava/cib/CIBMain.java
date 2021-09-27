@@ -1,6 +1,5 @@
 package school.cesar.fundamentosjava.cib;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class CIBMain {
@@ -8,36 +7,37 @@ public class CIBMain {
     public static void main(String[] args) {
         Scanner leTeclado = new Scanner(System.in);
 
-        Conta[] contas = new Conta[2];
+        Cliente[] clientes = new Cliente[2];
         int quantidadeDeContas = 0;
 
         while (quantidadeDeContas < 2) {
             Conta conta = new Conta();
-            conta.numero = new Random().nextInt() + "-" + new Random().nextInt();
-            conta.saldo = new Random().nextDouble();
-
+            System.out.println("conta criada com sucesso");
+            System.out.println(conta);
+            
             System.out.println("Digite os dados do cliente");
-            conta.cliente = new Cliente();
 
             System.out.println("Digite o nome");
-            conta.cliente.nome = leTeclado.next();
+            String nome = leTeclado.next();
 
             System.out.println("Digite o cpf");
-            conta.cliente.cpf = leTeclado.next();
+            String cpf = leTeclado.next();
 
-            contas[quantidadeDeContas] = conta;
+            while (!CPFUtil.isCPFValido(cpf)) {
+                System.out.println("DIgite novmante o cpf");
+                cpf = leTeclado.next();
+            }
+
+            System.out.println("Digite o valor do deposito inicial");
+            conta.creditar(leTeclado.nextDouble());
+
+            Cliente cliente = new Cliente(cpf, nome, conta);
+            cliente.setConta(conta);
+
+            clientes[quantidadeDeContas] = cliente;
             quantidadeDeContas++;
         }
 
-        if (contas[0].saldo > contas[1].saldo) {
-            System.out.println("O cliente de maior saldo é: " + contas[0].cliente.nome +
-                    "com saldo :" + contas[0].saldo + " enquanto o outro saldo é " + contas[1].saldo);
-        } else if (contas[0].saldo < contas[1].saldo) {
-            System.out.println("O cliente de maior saldo é: " + contas[1].cliente.nome +
-                    "com saldo :" + contas[1].saldo + " enquanto o outro saldo é " + contas[0].saldo);
-        } else {
-            System.out.println("Clientes tem o mesmo saldo");
-        }
 
         leTeclado.close();
     }
